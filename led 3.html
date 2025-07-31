@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LED Code Explained 💡💻</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+     img {
+      max-width: 500px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #000;
+    }
+    .container {
+      background-color: rgba(0,0,0,0.3);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 900px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(0,0,0,0.5);
+    }
+    h1 {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+    pre {
+      text-align: left;
+      background-color: #111;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #00ffcc;
+      box-shadow: 0 0 15px #000;
+    }
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+      line-height: 1.8;
+    }
+    .emoji {
+      font-size: 22px;
+    }
+    .next-button {
+      margin-top: 30px;
+      padding: 12px 25px;
+      background-color: #00b894;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .next-button:hover {
+      background-color: #00cec9;
+    }
+    .logo {
+      width: 80px;
+      height: auto;
+      margin: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+<a href="https://www.facebook.com/JupiterAcademyForKids/" target="_blank">
+  <img src="jupiter.webp" class="logo">
+</a>
+  <div class="container">
+    <h1>Let’s Light it Up! 🔥💡</h1>
+
+    <p><span class="emoji">📌</span> Here's a simple code to make your LED blink every second. Try it out! 🕺</p>
+
+<img src="لقطة شاشة 2025-07-21 185951.png" alt="">
+    <p><span class="emoji">🧠</span> <strong>pinMode()</strong>: Tells Arduino this pin will be used for OUTPUT.<br>
+    <strong>digitalWrite()</strong>: Sends voltage (HIGH) or turns it off (LOW).<br>
+    <strong>delay()</strong>: Pauses the program for a certain time in milliseconds. 1000 = 1 second.</p>
+
+    <p><span class="emoji">💡</span> Tip: You can connect an external LED to pin 13, or change the pin number in the code if using a different pin.</p>
+
+    <a href="index.html.html">
+      <button class="next-button">Back to Home 🏠</button>
+    </a>
+  </div>
+</body>
+</html>

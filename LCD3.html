@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LCD I2C Code Explained 💻📘</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #000428, #004e92);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: rgba(0,0,0,0.35);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 950px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+      line-height: 1.8;
+    }
+
+    pre {
+      text-align: left;
+      background-color: #111;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 16px;
+      color: #00ffcc;
+      box-shadow: 0 0 15px #000;
+      line-height: 1.6;
+    }
+
+    .next-button {
+      margin-top: 30px;
+      padding: 12px 25px;
+      background-color: #9b59b6;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .next-button:hover {
+      background-color: #8e44ad;
+    }
+
+    img {
+      max-width: 450px;
+      border-radius: 12px;
+      margin-top: 20px;
+      box-shadow: 0 0 20px #000;
+    }
+
+    .logo {
+      width: 80px;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+<a href="https://www.facebook.com/JupiterAcademyForKids/" target="_blank">
+  <img src="jupiter.webp" class="logo" alt="Logo">
+</a>
+
+  <div class="container">
+    <h1>Let’s Code the LCD! 💻🧠</h1>
+
+    <p>Here’s a basic code to display "Hello, world!" on your LCD screen using I2C connection. You’ll need the <strong>LiquidCrystal_I2C</strong> library first!</p>
+
+
+<img src="لقطة شاشة 2025-07-06 024108.png" alt="">
+
+
+    <p>📘 <strong>lcd.begin()</strong>: Initializes the LCD screen.<br>
+    💡 <strong>lcd.backlight()</strong>: Turns on the display light.<br>
+    🎯 <strong>lcd.setCursor(col, row)</strong>: Sets the text starting point.<br>
+    ✍ <strong>lcd.print()</strong>: Writes text to the screen.</p>
+
+    <img src="lcd-code.jpg" alt="LCD I2C Code Example">
+<br>
+    <a href="index.html.html">
+      <button class="next-button">Back to Home 🏠</button>
+    </a>
+  </div>
+</body>
+</html>

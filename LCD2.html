@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>How to Connect LCD I2C 🔌📘</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: rgba(0,0,0,0.35);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 950px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin: 10px 0;
+    }
+
+    ul {
+      text-align: left;
+      margin-top: 20px;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    img {
+      max-width: 400px;
+      margin-top: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #000;
+    }
+
+    .next-button {
+      margin-top: 30px;
+      padding: 12px 25px;
+      background-color: #27ae60;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .next-button:hover {
+      background-color: #2ecc71;
+    }
+
+    .logo {
+      width: 80px;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+<a href="https://www.facebook.com/JupiterAcademyForKids/" target="_blank">
+  <img src="jupiter.webp" class="logo" alt="Logo">
+</a>
+
+  <div class="container">
+    <h1>Let’s Wire It Up! 🔌💪</h1>
+
+    <p>Connecting the LCD I2C is super simple! Only 4 wires and you're good to go 👇</p>
+
+    <ul>
+      <li><strong>GND ➡ GND</strong> (ground connection)</li>
+      <li><strong>VCC ➡ 5V</strong> (power supply)</li>
+      <li><strong>SDA ➡ A4</strong> (Data line on Uno)</li>
+      <li><strong>SCL ➡ A5</strong> (Clock line on Uno)</li>
+    </ul>
+
+    <p>🛠 Use jumper wires to make the connections. Be gentle – those pins are tiny!</p>
+    <p>🔍 There’s a small screw on the back to control brightness (contrast). Use a screwdriver to adjust.</p>
+
+    <img src="لقطة شاشة 2025-07-21 192834.png" alt="LCD I2C Wiring">
+<br>
+    <a href="LCD3.html">
+      <button class="next-button">Next: The Code 💻➡</button>
+    </a>
+  </div>
+</body>
+</html>

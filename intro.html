@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to Arduino World</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #000000, #1f1c2c, #928dab);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 90px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .container {
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #00ffe7, #ff00c8, #faff00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+      color: #ccc;
+    }
+
+    .enter-button {
+      padding: 15px 40px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      background: linear-gradient(to right, #ff00c8, #00ffe7);
+      color: #000;
+      font-weight: bold;
+      box-shadow: 0 0 20px #00ffe7;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .enter-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px #ff00ff, 0 0 40px #00ffe7;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="https://www.facebook.com/JupiterAcademyForKids/" target="_blank">
+    <img src="jupiter.webp" alt="Jupiter Logo" class="logo">
+  </a>
+
+  <div class="container">
+    <h1>Welcome to Arduino World</h1>
+    <p>Explore powerful components and unleash your creativity</p>
+    <a href="index.html.html">
+      <button class="enter-button">Enter</button>
+    </a>
+  </div>
+
+</body>
+</html>
