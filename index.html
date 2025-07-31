@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arduino Components</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle, #0f0c29, #302b63, #24243e);
+      color: #fff;
+    }
+
+    .logo {
+      width: 80px;
+      height: auto;
+      margin: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.08) rotate(5deg);
+    }
+
+    h1 {
+      margin-top: 100px;
+      text-align: center;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #00ffff, #ff00ff, #ffff00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 50px;
+      padding: 0 30px 60px;
+    }
+
+    .component-link {
+      display: inline-block;
+      border-radius: 20px;
+      transition: transform 0.4s ease;
+    }
+
+    .component-img {
+      width: 200px;
+      height: 160px;
+      border-radius: 20px;
+      object-fit: cover;
+      border: 3px solid #ffffff;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.3s ease;
+    }
+
+    .component-link:hover .component-img {
+      transform: scale(1.1) rotate(1deg);
+      box-shadow: 0 0 30px #00f7ff, 0 0 50px #ff00f7;
+      border-color: #00ffe5;
+    }
+
+    .component-img:active {
+      transform: scale(0.95);
+      box-shadow: 0 0 10px #ff0;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="https://www.facebook.com/JupiterAcademyForKids/" target="_blank">
+    <img src="jupiter.webp" class="logo">
+  </a>
+
+  <h1>Arduino Components</h1>
+
+  <div class="image-container">
+    <a href="ARDUINO UNO.html" class="component-link">
+      <img src="arduino.jpg" alt="Arduino UNO" class="component-img">
+    </a>
+    <a href="LED.html" class="component-link">
+      <img src="led-png.jpg" alt="LED" class="component-img">
+    </a>
+    <a href="buzzer.html" class="component-link">
+      <img src="buzzer-png.jpg" alt="Buzzer" class="component-img">
+    </a>
+    <a href="RGB led.html" class="component-link">
+      <img src="RGB1.jpg" alt="RGB LED" class="component-img">
+    </a>
+    <a href="LCD.html" class="component-link">
+      <img src="LCD.jpg" alt="LCD" class="component-img">
+    </a>
+    <a href="#" class="component-link">
+      <img src="poton-png.jpg" alt="Potentiometer" class="component-img">
+    </a>
+    <a href="breadboard.html" class="component-link">
+      <img src="bread-png.jpg" alt="Breadboard" class="component-img">
+    </a>
+    <a href="servo.html" class="component-link">
+      <img src="servo1.jpg" alt="Servo Motor" class="component-img">
+    </a>
+    <a href="pushbutton.html" class="component-link">
+      <img src="BUSSH.jpg" alt="Push Button" class="component-img">
+    </a>
+  </div>
+
+</body>
+</html>
