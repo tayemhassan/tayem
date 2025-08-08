@@ -1,243 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arduino Components Levels</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: radial-gradient(circle, #0f0c29, #302b63, #24243e);
-            color: #fff;
-            min-height: 100vh;
-        }
-        
-        .logo {
-            width: 80px;
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            border-radius: 15px;
-            box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
-            transition: transform 0.3s ease;
-        }
-        
-        .logo:hover {
-            transform: scale(1.08) rotate(5deg);
-        }
-        
-        h1 {
-            text-align: center;
-            margin-top: 100px;
-            font-size: 3rem;
-            background: linear-gradient(90deg, #00ffff, #ff00ff, #ffff00);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            padding-bottom: 20px;
-            position: relative;
-        }
-        
-        h1::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 150px;
-            height: 4px;
-            background: linear-gradient(to right, #00ffff, #ff00ff);
-            border-radius: 2px;
-        }
-        
-        .levels-container {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-        
-        .level {
-            padding: 40px;
-            text-align: center;
-            margin-bottom: 40px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 25px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .level:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-        }
-        
-        .level-title {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-            position: relative;
-            display: inline-block;
-            padding: 0 20px;
-        }
-        
-        .level-title::before,
-        .level-title::after {
-            content: "◆";
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #00ffff;
-            font-size: 1.5rem;
-        }
-        
-        .level-title::before {
-            left: -10px;
-        }
-        
-        .level-title::after {
-            right: -10px;
-        }
-        
-        .level-one .level-title {
-            color: #4CAF50;
-        }
-        
-        .level-two .level-title {
-            color: #FFC107;
-        }
-        
-        .level-three .level-title {
-            color: #F44336;
-        }
-        
-        .image-container {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-        
-        .component-link {
-            display: inline-block;
-            border-radius: 20px;
-            transition: all 0.4s ease;
-            position: relative;
-            text-decoration: none;
-        }
-        
-        .component-img {
-            width: 200px;
-            height: 170px;
-            border-radius: 20px;
-            object-fit: cover;
-            border: 3px solid #ffffff;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: all 0.4s ease;
-        }
-        
-        .component-link:hover .component-img {
-            transform: scale(1.1) rotate(2deg);
-            box-shadow: 0 0 30px #00f7ff, 0 0 50px #ff00f7;
-            border-color: #00ffe5;
-        }
-        
-        .component-name {
-            position: absolute;
-            bottom: -25px;
-            left: 0;
-            right: 0;
-            text-align: center;
-            color: white;
-            font-weight: bold;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .component-link:hover .component-name {
-            opacity: 1;
-        }
-        
-        .separator {
-            height: 8px;
-            width: 60%;
-            margin: 60px auto;
-            background: linear-gradient(to right, transparent, #00ffff, #ff00ff, #ffff00, transparent);
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-            opacity: 0.7;
-        }
-        
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arduino Components Levels</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle, #0f0c29, #302b63, #24243e);
+      padding-bottom: 60px;
+    }
+
+    .logo {
+      width: 70px;
+      position:absolute;
+      top: 20px;
+      left: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+      transition: 0.3s;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #ff00f7;
+      border-radius: 25%;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 100px;
+      font-size: 3.2rem;
+      background: linear-gradient(90deg, #00ffe1, #ff00c8, #ffd700);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .levels-container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .level {
+      border-radius: 20px;
+      padding: 50px 30px;
+      margin-bottom: 60px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      position: relative;
+    }
+
+    .level-one {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+    }
+
+    .level-two {
+      background: linear-gradient(135deg, #ffda75, #ffc300);
+      color: #111;
+    }
+
+    .level-three {
+      background: linear-gradient(135deg, #ff4e50, #f9d423);
+      color: #111;
+    }
+
+    .level-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .level-icon {
+      font-size: 3rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 18px;
+      border-radius: 50%;
+      box-shadow: inset 0 0 10px rgba(255,255,255,0.3), 0 0 10px rgba(255,255,255,0.2);
+    }
+
+    .level-title {
+      font-size: 2.2rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, #00ffff, #ff00ff, #00fff2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+
+    }
+
+    .image-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .component-link {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 15px;
+      width: 220px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .component-link:hover {
+      transform: scale(1.009);
+      box-shadow: 0 15px 35px rgba(0, 255, 255, 0.3);
+    }
+
+    .component-img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 15px;
+      border: 2px solid #fff;
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+      transition: 0.4s ease;
+    }
+
+    .component-link:hover .component-img {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00f7ff, 0 0 25px #ff00f7;
+      border-color: #00ffe5;
+    }
+
+    .component-name {
+      margin-top: 12px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #fff;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .component-link:hover .component-name {
+      opacity: 1;
+    }
+
+    .separator {
+      height: 8px;
+      width: 80%;
+      margin: 50px auto;
+      border-radius: 5px;
+      background: linear-gradient(90deg, #00ffff, #ff00ff, #ffff00);
+    }
+
+    
+  </style>
 </head>
 <body>
-    <a href="https://www.facebook.com/JupiterAcademyForKids/" target="_blank">
-        <img src="jupiter.webp" class="logo" alt="Logo">
-    </a>
-    
-    <h1>Arduino Components</h1>
-    
-    <div class="levels-container">
-        <!-- Level One -->
-        <section class="level level-one">
-            <h2 class="level-title">Level One</h2>
-            <div class="image-container">
-                <a href="LED.html" class="component-link">
-                    <img src="led-png.jpg" alt="LED" class="component-img">
-                    <span class="component-name">LED</span>
-                </a>
-                <a href="pushbutton.html" class="component-link">
-                    <img src="BUSSH.jpg" alt="Push Button" class="component-img">
-                    <span class="component-name">Push Button</span>
-                </a>
-                <a href="breadboard.html" class="component-link">
-                    <img src="bread-png.jpg" alt="Breadboard" class="component-img">
-                    <span class="component-name">Breadboard</span>
-                </a>
-            </div>
-        </section>
-        
-        <div class="separator"></div>
-        
-        <!-- Level Two -->
-        <section class="level level-two">
-            <h2 class="level-title">Level Two</h2>
-            <div class="image-container">
-                <a href="#" class="component-link">
-                    <img src="poton-png.jpg" alt="Potentiometer" class="component-img">
-                    <span class="component-name">Potentiometer</span>
-                </a>
-                <a href="servo.html" class="component-link">
-                    <img src="servo1.jpg" alt="Servo Motor" class="component-img">
-                    <span class="component-name">Servo Motor</span>
-                </a>
-                <a href="buzzer.html" class="component-link">
-                    <img src="buzzer-png.jpg" alt="Buzzer" class="component-img">
-                    <span class="component-name">Buzzer</span>
-                </a>
-            </div>
-        </section>
-        
-        <div class="separator"></div>
-        
-        <!-- Level Three -->
-        <section class="level level-three">
-            <h2 class="level-title">Level Three</h2>
-            <div class="image-container">
-                <a href="ARDUINO UNO.html" class="component-link">
-                    <img src="arduino.jpg" alt="Arduino UNO" class="component-img">
-                    <span class="component-name">Arduino UNO</span>
-                </a>
-                <a href="LCD.html" class="component-link">
-                    <img src="LCD.jpg" alt="LCD" class="component-img">
-                    <span class="component-name">LCD Display</span>
-                </a>
-                <a href="RGB led.html" class="component-link">
-                    <img src="RGB1.jpg" alt="RGB LED" class="component-img">
-                    <span class="component-name">RGB LED</span>
-                </a>
-            </div>
-        </section>
-    </div>
+
+  <a href="https://www.facebook.com/JupiterAcademyForKids/" target="_blank">
+    <img src="jupiter.webp" class="logo" alt="Logo">
+  </a>
+
+  <h1>Arduino Components</h1>
+
+  <div class="levels-container">
+
+    <section class="level level-one">
+      <div class="level-header">
+        <div class="level-icon">🔰</div>
+        <h2 class="level-title">Level 1: Beginner</h2>
+      </div>
+      <div class="image-container">
+        <a href="LED.html" class="component-link">
+          <img src="led-png.jpg" alt="LED" class="component-img">
+          <div class="component-name">LED</div>
+        </a>
+        <a href="pushbutton.html" class="component-link">
+          <img src="BUSSH.jpg" alt="Push Button" class="component-img">
+          <div class="component-name">Push Button</div>
+        </a>
+        <a href="breadboard.html" class="component-link">
+          <img src="bread-png.jpg" alt="Breadboard" class="component-img">
+          <div class="component-name">Breadboard</div>
+        </a>
+      </div>
+    </section>
+
+    <div class="separator"></div>
+
+    <section class="level level-two">
+      <div class="level-header">
+        <div class="level-icon">⚙️</div>
+        <h2 class="level-title">Level 2: Intermediate</h2>
+      </div>
+      <div class="image-container">
+        <a href="#" class="component-link">
+          <img src="poton-png.jpg" alt="Potentiometer" class="component-img">
+          <div class="component-name">Potentiometer</div>
+        </a>
+        <a href="servo.html" class="component-link">
+          <img src="servo1.jpg" alt="Servo Motor" class="component-img">
+          <div class="component-name">Servo Motor</div>
+        </a>
+        <a href="buzzer.html" class="component-link">
+          <img src="buzzer-png.jpg" alt="Buzzer" class="component-img">
+          <div class="component-name">Buzzer</div>
+        </a>
+      </div>
+    </section>
+
+    <div class="separator"></div>
+
+    <section class="level level-three">
+      <div class="level-header">
+        <div class="level-icon">🚀</div>
+        <h2 class="level-title">Level 3: Advanced</h2>
+      </div>
+      <div class="image-container">
+        <a href="ARDUINO UNO.html" class="component-link">
+          <img src="arduino.jpg" alt="Arduino UNO" class="component-img">
+          <div class="component-name">Arduino UNO</div>
+        </a>
+        <a href="LCD.html" class="component-link">
+          <img src="LCD.jpg" alt="LCD" class="component-img">
+          <div class="component-name">LCD Display</div>
+        </a>
+        <a href="RGB led.html" class="component-link">
+          <img src="RGB1.jpg" alt="RGB LED" class="component-img">
+          <div class="component-name">RGB LED</div>
+        </a>
+      </div>
+    </section>
+
+  </div>
+
 </body>
 </html>
