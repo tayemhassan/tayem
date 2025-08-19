@@ -1,31 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            background-color: black;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skincare Page</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+.hero {
+background-image: url();
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
-        img {
-            max-width: 200px;
-            border: 3px solid white;
-            border-radius: 50%;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.480);
-            margin: 25%;
-            text-align: center;
-            justify-items: center;
-            margin-right:  75px;
+}
+.hero-text {
+    max-width: 400px;
+}
 
-        }
-    </style>
+.btn {
+    padding: 8px 15px;
+    border: 1px solid black;
+    background: none;
+    cursor: pointer;
+}
+.section {
+    padding: 20px;
+}
+.product-row {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+.product-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-width: 150px;
+    text-align: center;
+}
+.product-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.banner img {
+    width: 100%;
+}
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    background: rgba(0,0,0,0.4);
+    padding: 15px;
+}
+.footer-text {
+    padding: 30px;
+    text-align: center;
+    background: #f7f5ef;
+}
+</style>
 </head>
-
 <body>
-    <img src="ChatGPT Image 8 أغسطس 2025، 07_32_01 ص.png" alt="">
-</body>
 
+<div class="hero">
+    <div class="hero-text">
+        <h2>Highly Effective Body Care</h2>
+        <p>Vegan, natural, skin-friendly.</p>
+        <button class="btn">Discover More</button>
+    </div>
+</div>
+
+<div class="section">
+    <div style="display:flex;gap:20px;flex-wrap:wrap;">
+        <img src="feature.jpg" alt="Feature" style="width:250px;max-width:100%;">
+        <div>
+            <h3>Potent Solutions for Demanding Skin</h3>
+            <p>Products for daily hydration and vitamins.</p>
+            <button class="btn">Read More</button>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h3>Supreme Skin Fortification</h3>
+    <p>Discover our potent antioxidant-rich Parsley Seed Skin Care, perfect for all skin types.</p>
+    <div class="product-row">
+        <div class="product-card">
+            <img src="product1.jpg" alt="">
+            <h4>Lucent Facial Concentrate</h4>
+            <p>$94</p>
+        </div>
+        <div class="product-card">
+            <img src="product2.jpg" alt="">
+            <h4>Cellular Protection Hand Cream</h4>
+            <p>$22</p>
+        </div>
+        <div class="product-card">
+            <img src="product3.jpg" alt="">
+            <h4>Gentle Balancing Toner</h4>
+            <p>$32</p>
+        </div>
+        <div class="product-card">
+            <img src="product4.jpg" alt="">
+            <h4>Sublime Night Masque</h4>
+            <p>$108</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="section">
+    <h3>Natural Face Care for Visible Transformation</h3>
+    <p>Our natural face care is based on pure ingredients and plant power to provide visible results.</p>
+    <div class="product-row">
+        <div class="product-card">
+            <img src="product5.jpg" alt="">
+            <h4>Pure Micellar Cleansing Water</h4>
+            <p>$32</p>
+        </div>
+        <div class="product-card">
+            <img src="product6.jpg" alt="">
+            <h4>The Essential Kit</h4>
+            <p>$124</p>
+        </div>
+        <div class="product-card">
+            <img src="product7.jpg" alt="">
+            <h4>Reverence Aromatique Hand Balm</h4>
+            <p>$25</p>
+        </div>
+        <div class="product-card">
+            <img src="product8.jpg" alt="">
+            <h4>Classic Skin Care Kit</h4>
+            <p>$85</p>
+        </div>
+    </div>
+</div>
+
+<div class="footer-text">
+    Countless answers lie within nature's genius, awaiting our exploration and engagement.
+</div>
+
+</body>
 </html>

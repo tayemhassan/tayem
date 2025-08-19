@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>طريقة توصيل شاشة LCD I2C 🔌📘</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      direction: rtl; /* عشان الكلام يبقى من اليمين للشمال */
+    }
+
+    .container {
+      background-color: rgba(0,0,0,0.35);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 950px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin: 10px 0;
+    }
+
+    ul {
+      text-align: right;
+      margin-top: 20px;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    img {
+      max-width: 400px;
+      margin-top: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #000;
+    }
+
+    .next-button {
+      margin-top: 30px;
+      padding: 12px 25px;
+      background-color: #27ae60;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .next-button:hover {
+      background-color: #2ecc71;
+    }
+
+    .logo {
+      width: 80px;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+<a href="https://www.facebook.com/JupiterAcademyForKids/" target="_blank">
+  <img src="jupiter.webp" class="logo" alt="الشعار">
+</a>
+
+  <div class="container">
+    <h1>يلا نوصّلها! 🔌💪</h1>
+
+    <p>توصيل شاشة LCD I2C سهل جدًا! محتاج بس 4 أسلاك وخلاص 👇</p>
+
+    <ul>
+      <li><strong>GND ➡ GND</strong> (الأرضي)</li>
+      <li><strong>VCC ➡ 5V</strong> (مصدر الطاقة)</li>
+      <li><strong>SDA ➡ A4</strong> (خط البيانات في أردوينو أونو)</li>
+      <li><strong>SCL ➡ A5</strong> (خط الساعة في أردوينو أونو)</li>
+    </ul>
+
+    <p>🛠 استخدم Jumper Wires للتوصيلات. خلي بالك – البِنات صغيرة وممكن تتني بسهولة!</p>
+    <p>🔍 في مسمار صغير ورا الشاشة بيتحكم في درجة السطوع (الكونتراست). استخدم مفك علشان تضبطه.</p>
+
+    <img src="لقطة شاشة 2025-07-21 192834.png" alt="توصيل شاشة LCD I2C">
+<br>
+    <a href="LCD3 - AR.html">
+      <button class="next-button">التالي: الكود 💻➡</button>
+    </a>
+  </div>
+</body>
+</html>
