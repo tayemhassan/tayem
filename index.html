@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,30 +9,25 @@
       font-family: 'Segoe UI', sans-serif;
       background: radial-gradient(circle, #0f0c29, #302b63, #24243e);
       padding-bottom: 60px;
-
+      margin: 0;
     }
-
+    * { box-sizing: border-box; }
     .logo {
       width: 70px;
-      position: absolute;
+      position: fixed;
       top: 20px;
       left: 20px;
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
       transition: 0.3s;
-      position: fixed;
+      max-width: 15vw;
+      height: auto;
     }
-
     .logo:hover {
       transform: scale(1.05);
       box-shadow: 0 0 25px #ff00f7;
       border-radius: 25%;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
     h1 {
       text-align: center;
       margin-top: 100px;
@@ -42,38 +36,23 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      padding: 0 10px;
     }
-
     .levels-container {
       max-width: 1200px;
       margin: 60px auto;
       padding: 0 20px;
     }
-
     .level {
       border-radius: 20px;
       padding: 50px 30px;
       margin-bottom: 60px;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-      position: relative;
     }
-
-    .level-one {
-      background: linear-gradient(135deg, #1e3c72, #0b3177);
-    }
-
-    .level-two {
-      background: linear-gradient(135deg, #4f2a98, #e90a4d);
-    }
-
-    .level-three {
-      background: linear-gradient(135deg, #ff4e50, #f9d423);
-    }
-
-    .level-four {
-      background: linear-gradient(135deg, #1cb5e0, #000851);
-    }
-
+    .level-one { background: linear-gradient(135deg, #1e3c72, #0b3177); }
+    .level-two { background: linear-gradient(135deg, #4f2a98, #e90a4d); }
+    .level-three { background: linear-gradient(135deg, #ff4e50, #f9d423); }
+    .level-four { background: linear-gradient(135deg, #1cb5e0, #000851); }
     .level-header {
       display: flex;
       align-items: center;
@@ -83,66 +62,51 @@
       margin-bottom: 40px;
       text-align: center;
     }
-
     .level-icon {
       font-size: 3rem;
       background: rgba(255, 255, 255, 0.1);
-      padding:25px;
+      padding: 25px;
       border-radius: 50%;
-border: #fff 3px solid;
+      border: #fff 3px solid;
       box-shadow: inset 0 0 20px rgb(187, 184, 184),0 0 20px rgb(187, 184, 184);
     }
-
     .level-title {
       font-size: 2.2rem;
       font-weight: 900;
       color: #fff;
       text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
     }
-
     .image-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
     }
-
     .component-link {
       background: rgba(255, 255, 255, 0.05);
       border-radius: 20px;
       padding: 15px;
       width: 220px;
+      max-width: 90vw;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
       text-align: center;
-      position: relative;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-decoration: none;
-      display: inline-block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .component-link:hover {
       transform: scale(1.009);
       box-shadow: 0 15px 35px rgba(0, 255, 255, 0.3);
     }
-
     .component-img {
-     transition: transform 0.3s ease, box-shadow 0.3s ease;
       width: 100%;
-      height: 150px;
+      height: auto;
+      max-height: 150px;
       object-fit: cover;
       border-radius: 15px;
       border: 2px solid #fff;
       box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
       transition: 0.4s ease;
     }
-
-    .component-link:hover .component-img {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px #00f7ff, 0 0 25px #ff00f7;
-      border-color: #00ffe5;
-    }
-    
-
     .component-name {
       margin-top: 12px;
       font-weight: bold;
@@ -151,13 +115,8 @@ border: #fff 3px solid;
       opacity: 0;
       transition: opacity 0.3s ease;
       user-select: none;
-      pointer-events: none;
     }
-
-    .component-link:hover .component-name {
-      opacity: 1;
-    }
-
+    .component-link:hover .component-name { opacity: 1; }
     .separator {
       height: 8px;
       width: 80%;
@@ -165,19 +124,19 @@ border: #fff 3px solid;
       border-radius: 5px;
       background: linear-gradient(90deg, #00ffff, #ff00ff, #ffff00);
     }
-
     p {
       font-size: 2.2rem;
       font-weight: 900;
       color: #fff;
       text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+      text-align: center;
+      padding: 0 10px;
     }
-        .lang-btn {
-
-      position: absolute;
+    .lang-btn {
+      position: fixed;
       top: 20px;
       right: 20px;
-      padding: 23px 23px;
+      padding: 15px 18px;
       background: #fff;
       border-radius: 12px;
       font-size: 18px;
@@ -186,35 +145,39 @@ border: #fff 3px solid;
       text-decoration: none;
       box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
       transition: all 0.3s;
-      position: fixed;
     }
-
     .lang-btn:hover {
       border-radius: 25%;
       transform: scale(1.08);
       box-shadow: 0 0 15px #ff00f7;
     }
-    #ff{
-      margin-left:180px ;
-      font-size: 25px;
-      font-weight: 900;
-      color: #fff;
-      text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    #ff {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 90%;
+      font-size: 1.6rem;
+      text-align: center;
     }
-
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2rem; margin-top: 80px; }
+      .level-title { font-size: 1.6rem; }
+      p { font-size: 1.5rem; }
+      .level { padding: 30px 15px; }
+    }
+    @media (max-width: 480px) {
+      .level-icon { font-size: 2rem; padding: 15px; }
+      .lang-btn { padding: 10px 14px; font-size: 16px; }
+      #ff { font-size: 1.3rem; }
+    }
   </style>
 </head>
-
 <body>
-
   <a href="https://www.facebook.com/JupiterAcademyForKids/" target="_blank">
     <img src="jupiter.webp" class="logo" alt="Logo">
   </a>
   <a href="index - AR.html" class="lang-btn">AR</a>
   <h1>Arduino Components | In English</h1>
-
   <div class="levels-container">
-
     <section class="level level-one">
       <div class="level-header">
         <div class="level-icon">🌐</div>
@@ -251,9 +214,7 @@ border: #fff 3px solid;
         </a>
       </div>
     </section>
-
     <div class="separator"></div>
-
     <section class="level level-two">
       <div class="level-header">
         <div class="level-icon">🧠</div>
@@ -290,9 +251,7 @@ border: #fff 3px solid;
         </a>
       </div>
     </section>
-
     <div class="separator"></div>
-
     <section class="level level-three">
       <div class="level-header">
         <div class="level-icon">🚀</div>
@@ -302,23 +261,17 @@ border: #fff 3px solid;
         <p>coming soon !</p>
       </div>
     </section>
-
     <div class="separator"></div>
-
     <section class="level level-four">
       <div class="level-header">
         <div class="level-icon">🎓</div>
         <h2 class="level-title">Rank 4: Projects</h2>
       </div>
       <div class="image-container">
-        <div class="image-container">
-          <p>coming soon !</p>
-        </div>
+        <p>coming soon !</p>
       </div>
     </section>
-<p id="ff">Fresh updates every week — stay tuned for something new </p>
+    <p id="ff">Fresh updates every week — stay tuned for something new</p>
   </div>
-<div></div>
 </body>
-
 </html>
