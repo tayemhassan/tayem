@@ -170,17 +170,36 @@
       #ff { font-size: 1.3rem; }
     }
     .update {
-  background: linear-gradient(45deg, #ff3b3b, #ff7f00, #ffff00, #00ff00, #00bfff, #8a2be2);
-  -webkit-background-clip: text;
-  color: transparent;
-  font-weight: bold;
-  
-}
-.upgrade{
-  font-weight: bold;
-  
-}
-
+      background: linear-gradient(45deg, #ff3b3b, #ff7f00, #ffff00, #00ff00, #00bfff, #8a2be2);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: bold;
+    }
+    .upgrade {
+      font-weight: bold;
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+    }
+    .enter-button {
+      padding: 15px 40px;
+      font-size:1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      background: linear-gradient(to right, #ff00c8, #00ffe7);
+      color: #000;
+      font-weight: bold;
+      box-shadow: 0 0 20px #00ffe7;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .enter-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px #ff00ff, 0 0 40px #00ffe7;
+    }
   </style>
 </head>
 <body>
@@ -284,9 +303,13 @@
         <p>coming soon !</p>
       </div>
     </section>
-    <p id="ff">Fresh updates every week — stay tuned for something new</p>
-    <p id="ff">  <u class="update">update</u> : Now you can easily switch between Arabic and English languages using the button above (AR)</p>
-
+    <p id="ff">Fresh updates every week — stay tuned for something new</p> 
+    <p id="ff"><u class="update">update</u> : Now you can easily switch between Arabic and English languages using the button above (AR)</p>
+    <div class="button-container">
+      <a href="CODEX.html">
+        <button class="enter-button">ADAM STYLE 💻</button>
+      </a>
+    </div>
   </div>
 </body>
 </html>
