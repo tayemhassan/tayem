@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arduino Components Levels | EN</title>
+  <style>
+    * {
+      text-shadow: none;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle, #ffffff, #e0f7ff, #b3e5fc);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #222;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      margin-top: 100px;
+      color: #005f99;
+      text-shadow: 0 0 10px rgba(0, 153, 255, 0.4);
+      transition: 0.3s;
+    }
+
+    h1:hover {
+      color: #00aaff;
+      text-shadow: 0 0 20px rgba(0, 153, 255, 0.6);
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 15px auto;
+      width: 80%;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .logo {
+      width: 70px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 153, 255, 0.4);
+      transition: 0.3s;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00aaff;
+    }
+
+    .language-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: linear-gradient(135deg, #00aaff, #66cfff);
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0, 170, 255, 0.4);
+      transition: 0.3s;
+    }
+
+    .language-toggle:hover {
+      background: linear-gradient(135deg, #007acc, #00aaff);
+      box-shadow: 0 0 15px rgba(0, 153, 255, 0.6);
+      transform: scale(1.05);
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 60px;
+    }
+
+    .card {
+      width: 250px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      padding: 20px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 20px rgba(0, 153, 255, 0.4);
+      border: 1px solid #00aaff;
+    }
+
+    .card img {
+      width: 100px;
+      margin-bottom: 15px;
+      transition: 0.3s;
+    }
+
+    .card img:hover {
+      transform: scale(1.1);
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #007acc;
+      transition: 0.3s;
+    }
+
+    .card:hover h2 {
+      color: #00aaff;
+    }
+
+    .card p {
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .card {
+        width: 200px;
+      }
+
+      .card img {
+        width: 80px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a href="https://www.facebook.com/JupiterAcademyForKids/">
+    <img src="jupiter.webp" alt="Logo" class="logo">
+  </a>
+
+  <button class="language-toggle">AR</button>
+
+  <h1>Arduino Components Levels</h1>
+  <p>Explore the different components used in Arduino projects and learn their levels step by step.</p>
+
+  <div class="container">
+    <div class="card">
+      <p>Beginner Explorer</p>
+      <h2>RANK 1</h2>
+      <p>A beginner-friendly stage designed to introduce you to the basics</p>
+    </div>
+
+    <div class="card">
+      <p>Skilled Challenger</p>
+      <h2>RANK 2</h2>
+      <p>A balanced challenge that tests your growing skills and focus</p>
+    </div>
+
+    <div class="card">
+      <p>Master of Legends</p>
+      <h2>RANK 3</h2>
+      <p>The ultimate test of mastery, requiring high experience and determination</p>
+    </div>
+  </div>
+</body>
+
+</html>
