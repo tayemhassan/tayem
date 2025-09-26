@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>What’s an Ultrasonic Sensor? 📡🤖</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #000428, #004e92);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      background-color: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 850px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    }
+    h1 {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+      line-height: 1.7;
+    }
+    .emoji {
+      font-size: 22px;
+    }
+    img {
+      max-width: 250px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #000;
+    }
+    .next-button {
+      margin-top: 30px;
+      padding: 12px 25px;
+      background-color: #ff6f00;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .next-button:hover {
+      background-color: #ffa000;
+    }
+    .logo {
+      width: 80px;
+      height: auto;
+      margin: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+<a href="https://www.facebook.com/JupiterAcademyForKids/" target="_blank">
+  <img src="jupiter.webp" class="logo">
+</a>
+  <div class="container">
+    <h1>Meet the Ultrasonic Sensor 📡</h1>
+
+    <p><span class="emoji">🎯</span> The <strong>Ultrasonic Sensor (HC-SR04)</strong> measures distance using sound waves (like a bat 🦇).</p>
+
+    <p><span class="emoji">📏</span> It can measure from about <strong>2cm to 400cm</strong> with good accuracy.</p>
+
+    <p><span class="emoji">⚡</span> It works by sending an ultrasonic pulse (Trigger) and waiting for the echo to return.</p>
+
+    <p><span class="emoji">🔌</span> It has <strong>4 pins</strong>:  
+      <br>VCC → 5V  
+      <br>GND → Ground  
+      <br>TRIG → Trigger pin  
+      <br>ECHO → Echo pin
+    </p>
+
+    <p><span class="emoji">🚀</span> It’s an <strong>INPUT</strong> sensor since it sends distance data to Arduino.</p>
+
+    <img src="ultra1.jpg" alt="Ultrasonic Sensor">
+<br>
+    <a href="ultra2.html">
+      <button class="next-button">Next: Wiring Guide 🔌➡</button>
+    </a>
+  </div>
+</body>
+</html>

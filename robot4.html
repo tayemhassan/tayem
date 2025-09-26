@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Robot Car — Motor Driver (L298N)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body{font-family:'Segoe UI',sans-serif;margin:0;background:linear-gradient(to right,#000428,#004e92);color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;}
+    .container{background:rgba(255,255,255,0.05);border-radius:20px;padding:30px;max-width:900px;text-align:left;box-shadow:0 0 25px rgba(0,0,0,0.6);}
+    h1{font-size:34px}
+    h2{color:#ffd480;margin-top:18px}
+    p{font-size:16px;line-height:1.7}
+    .next-button{margin-top:22px;padding:12px 26px;background:#ff6f00;color:#fff;border:none;border-radius:30px;font-size:16px;cursor:pointer;}
+    img{max-width:420px;border-radius:10px;margin-top:12px;box-shadow:0 0 15px #000;display:block;margin-left:auto;margin-right:auto}
+    .pins{background:rgba(255,255,255,0.03);padding:12px;border-radius:10px;margin-top:12px;}
+    .logo{position:absolute;left:12px;top:12px;width:80px;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,0.3);}
+  </style>
+</head>
+<body>
+  <a href="https://www.facebook.com/JupiterAcademyForKids/" target="_blank"><img src="jupiter.webp" class="logo" alt="logo"></a>
+  <div class="container">
+    <h1>Motor Driver — L298N (Deep Dive)</h1>
+
+    <p>
+      The <strong>L298N</strong> is a popular dual H-bridge motor driver module. It can drive two DC motors independently,
+      handle direction control and accept PWM for speed control.
+    </p>
+
+    <h2>Why we use it</h2>
+    <p>
+      - Supplies higher current to motors that Arduino cannot provide directly.<br>
+      - Allows reversing motor polarity (forward/reverse).<br>
+      - Takes control signals (IN1/IN2/IN3/IN4) and PWM enable signals.
+    </p>
+
+    <div class="pins">
+      <strong>Common pins (on typical module):</strong>
+      <ul>
+        <li>VCC (motor power) — connect battery (e.g., 7.4V)</li>
+        <li>5V EN (sometimes jumper) — powers logic (if regulator present)</li>
+        <li>GND — common ground with Arduino</li>
+        <li>IN1 / IN2 — control motor A direction</li>
+        <li>IN3 / IN4 — control motor B direction</li>
+        <li>ENA / ENB — PWM pins to control speed</li>
+        <li>OUT1..OUT4 — outputs to motors</li>
+      </ul>
+    </div>
+
+    <img src="rororo.webp" alt="L298N wiring">
+
+    <h2>Practical tips</h2>
+    <p>
+      - Check the <strong>stall current</strong> of your motor. L298N can handle ~2A per channel on some modules (but check specs).<br>
+      - Use adequate battery: low voltage causes weak torque, too high may damage motor/driver.<br>
+      - Add decoupling capacitors and common ground for stable signals.
+    </p>
+
+    <br>
+    <a href="robot5.html"><button class="next-button">Next: Wiring & Full Circuit ➜</button></a>
+  </div>
+</body>
+</html>

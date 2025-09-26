@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Robot Car — Parts & Components</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body{font-family:'Segoe UI',sans-serif;margin:0;background:linear-gradient(to right,#000428,#004e92);color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;}
+    .container{background:rgba(255,255,255,0.05);border-radius:20px;padding:30px;max-width:900px;text-align:left;box-shadow:0 0 25px rgba(0,0,0,0.6);}
+    h1{font-size:34px}
+    h2{color:#ffd480;margin-top:18px}
+    p{font-size:16px;line-height:1.7}
+    ul{margin-left:18px}
+    img{max-width:340px;border-radius:10px;margin-top:12px;box-shadow:0 0 15px #000}
+    .next-button{margin-top:22px;padding:12px 26px;background:#ff6f00;color:#fff;border:none;border-radius:30px;font-size:16px;cursor:pointer;}
+    .logo{position:absolute;left:12px;top:12px;width:80px;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,0.3);}
+    .item-title{font-weight:700;color:#fff8dd}
+  </style>
+</head>
+<body>
+  <a href="https://www.facebook.com/JupiterAcademyForKids/" target="_blank"><img src="jupiter.webp" class="logo" alt="logo"></a>
+  <div class="container">
+    <h1>Parts & Components</h1>
+
+    <p>Below is a detailed list of what you need for the 2-motor Bluetooth robot car (recommended parts + notes):</p>
+
+    <h2>Core electronics</h2>
+    <ul>
+      <li><span class="item-title">Arduino Uno / Nano</span> — main controller. Nano is smaller and fits the chassis.</li>
+      <li><span class="item-title">Bluetooth Module (HC-05 / HC-06)</span> — serial wireless link; HC-05 can be master/slave.</li>
+      <li><span class="item-title">Motor Driver (L298N or L293D)</span> — drives two DC motors and accepts direction and PWM inputs.</li>
+      <li><span class="item-title">2 × DC Geared Motors</span> — pair matched for similar RPM/torque (12V or 6V depending on driver & battery).</li>
+    </ul>
+
+    <h2>Power & mechanical</h2>
+    <ul>
+      <li><span class="item-title">Battery pack</span> — e.g., 2S Li-ion (7.4V) or 6×AA NiMH depending on motors.</li>
+      <li><span class="item-title">Chassis kit</span> — base plate, wheel hubs, caster wheel.</li>
+      <li><span class="item-title">Wires, connectors, screws</span> — male/female jumpers, terminal blocks.</li>
+    </ul>
+
+    <h2>Optional (recommended)</h2>
+    <ul>
+      <li>Small breadboard or perfboard for tidy wiring</li>
+      <li>Voltage regulator (if L298N onboard regulator unsuitable)</li>
+      <li>Indicator LEDs and resistors for power/mode signals</li>
+    </ul>
+
+    <img src="roooooooooooooob.avif" alt="L298N module">
+
+    <br>
+    <a href="robot3.html"><button class="next-button">Next: The DC Motors (how they work) ➜</button></a>
+  </div>
+</body>
+</html>

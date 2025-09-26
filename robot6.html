@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Robot Car — Arduino Code</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body{font-family:'Segoe UI',sans-serif;margin:0;background:linear-gradient(to right,#000428,#004e92);color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;}
+    .container{background:rgba(255,255,255,0.05);border-radius:20px;padding:30px;max-width:900px;text-align:left;box-shadow:0 0 25px rgba(0,0,0,0.6);}
+    h1{font-size:34px}
+    h2{color:#ffd480;margin-top:18px}
+    pre{background:#071225;padding:12px;border-radius:8px;color:#00ffcc;overflow:auto;font-size:14px;line-height:1.6}
+    p{font-size:15px;line-height:1.7}
+    .next-button{margin-top:22px;padding:12px 26px;background:#ff6f00;color:#fff;border:none;border-radius:30px;font-size:16px;cursor:pointer;}
+    .logo{position:absolute;left:12px;top:12px;width:80px;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,0.3);}
+  </style>
+</head>
+<body>
+  <a href="https://www.facebook.com/JupiterAcademyForKids/" target="_blank"><img src="jupiter.webp" class="logo" alt="logo"></a>
+  <div class="container">
+    <h1>Arduino Code — Full Example</h1>
+
+    <p>This example uses <strong>SoftwareSerial</strong> to talk with HC-05 so you can keep hardware Serial for debug. 
+       It reads single-character commands from phone: F,B,L,R,S (forward, back, left, right, stop).</p>
+
+    <pre>
+#include &lt;SoftwareSerial.h&gt;
+
+SoftwareSerial BT(10, 11); // RX, TX for HC-05 (change if needed)
+
+// Motor A (left)
+const int ENA = 5;   // PWM pin
+const int IN1 = 4;
+const int IN2 = 3;
+
+// Motor B (right)
+const int ENB = 6;   // PWM pin
+const int IN3 = 8;
+const int IN4 = 7;
+
+void setup() {
+  // serial
+  Serial.begin(9600);
+  BT.begin(9600);
+
+  // motor pins
+  pinMode(ENA, OUTPUT);
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+
+  pinMode(ENB, OUTPUT);
+  pinMode(IN3, OUTPUT);
+  pinMode(IN4, OUTPUT);
+
+  stopMotors();
+}
+
+void loop() {
+  if (BT.available()) {
+    char cmd = BT.read();
+    Serial.print("Cmd: ");
+    Serial.println(cmd);
+    executeCommand(cmd);
+  }
+}
+
+void executeCommand(char c) {
+  c = toupper(c);
+  if (c == 'F') forward();
+  else if (c == 'B') backward();
+  else if (c == 'L') turnLeft();
+  else if (c == 'R') turnRight();
+  else if (c == 'S') stopMotors();
+}
+
+void forward() {
+  analogWrite(ENA, 200);
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+
+  analogWrite(ENB, 200);
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4, LOW);
+}
+
+void backward() {
+  analogWrite(ENA, 200);
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, HIGH);
+
+  analogWrite(ENB, 200);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, HIGH);
+}
+
+void turnLeft() {
+  // left wheel slow/stop, right wheel forward
+  analogWrite(ENA, 0);
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, LOW);
+
+  analogWrite(ENB, 200);
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4, LOW);
+}
+
+void turnRight() {
+  // right wheel slow/stop, left wheel forward
+  analogWrite(ENB, 0);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, LOW);
+
+  analogWrite(ENA, 200);
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+}
+
+void stopMotors() {
+  analogWrite(ENA, 0);
+  analogWrite(ENB, 0);
+  digitalWrite(IN1, LOW); digitalWrite(IN2, LOW);
+  digitalWrite(IN3, LOW); digitalWrite(IN4, LOW);
+}
+    </pre>
+
+    <h2>Line-by-line notes</h2>
+    <p>
+      - <code>SoftwareSerial BT(10,11)</code> creates a serial on pins 10(RX) and 11(TX) — adjust to your wiring.<br>
+      - Motor pins: INx control polarity (direction), ENx gets PWM (speed). analogWrite(0..255).<br>
+      - Commands are single chars for simplicity; you can extend to commands like "SPEED:180".
+    </p>
+
+    <br>
+    <a href="robot7.html"><button class="next-button">Next: Bluetooth Control & App ➜</button></a>
+  </div>
+</body>
+</html>

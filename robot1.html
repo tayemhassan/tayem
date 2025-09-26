@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Bluetooth Robot Car — Introduction</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: linear-gradient(to right, #000428, #004e92);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 900px;
+            text-align: left;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+        }
+
+        h1 {
+            font-size: 34px;
+            margin: 0 0 12px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin: 18px 0 8px;
+            color: #ff0000;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 8px 0;
+        }
+
+        img {
+            max-width: 320px;
+            border-radius: 10px;
+            margin-top: 16px;
+            box-shadow: 0 0 15px #000;
+        }
+
+        .next-button {
+            margin-top: 22px;
+            padding: 12px 26px;
+            background: #ff6f00;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .logo {
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            width: 80px;
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .lead {
+            font-weight: 600;
+            color: #ffe8b3;
+        }
+
+        ul {
+            margin: 8px 0 0 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.facebook.com/JupiterAcademyForKids/" target="_blank">
+        <img src="jupiter.webp" class="logo" alt="logo">
+    </a>
+
+    <div class="container">
+        <h1>Bluetooth Robot Car — Introduction</h1>
+
+        <p class="lead">What this project is — and what you'll learn</p>
+
+        <p>
+            This project builds a small remote-controlled car that is driven by <strong>two DC motors</strong>
+            and controlled wirelessly from a smartphone using a Bluetooth module (HC-05 / HC-06).
+            The brain is an <strong>Arduino</strong>, and the motors are powered and controlled via a <strong>motor
+                driver</strong>.
+        </p>
+
+        <h2>Why Bluetooth?</h2>
+        <p>
+            Bluetooth is simple to use, available on every smartphone, and perfect for low-range control.
+            The phone sends short commands (e.g., "F" for forward, "L" for left) → the HC-05 receives them → Arduino
+            reads and interprets →
+            Arduino commands the motor driver to move the motors.
+        </p>
+
+        <h2>What you'll get from the guide</h2>
+        <dl>
+            <li>Full parts list and recommended modules (Arduino, HC-05, L298N/L293D)</li>
+            <li>Mechanical setup for a 2-motor chassis</li>
+            <li>Detailed wiring diagrams and photos</li>
+            <li>Complete Arduino code with explanation</li>
+            <li>Troubleshooting and enhancements (sensors, LEDs, battery tips)</li>
+        </dl>
+
+        <img src="robot2.jpg"
+            alt="robot car example">
+
+        <br>
+        <a href="robot2.html"><button class="next-button">Next: Parts & Components ➜</button></a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Robot Car — Wiring & Circuit</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body{font-family:'Segoe UI',sans-serif;margin:0;background:linear-gradient(to right,#000428,#004e92);color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;}
+    .container{background:rgba(255,255,255,0.05);border-radius:20px;padding:30px;max-width:900px;text-align:left;box-shadow:0 0 25px rgba(0,0,0,0.6);}
+    h1{font-size:34px}
+    h2{color:#ffd480;margin-top:18px}
+    p{font-size:16px;line-height:1.7}
+    img{max-width:100%;border-radius:10px;margin-top:12px;box-shadow:0 0 15px #000;display:block}
+    .next-button{margin-top:22px;padding:12px 26px;background:#ff6f00;color:#fff;border:none;border-radius:30px;font-size:16px;cursor:pointer;}
+    .wires{background:rgba(255,255,255,0.03);padding:12px;border-radius:10px;margin-top:12px;}
+    .logo{position:absolute;left:12px;top:12px;width:80px;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,0.3);}
+  </style>
+</head>
+<body>
+  <a href="https://www.facebook.com/JupiterAcademyForKids/" target="_blank"><img src="jupiter.webp" class="logo" alt="logo"></a>
+  <div class="container">
+    <h1>Wiring & Full Circuit</h1>
+
+    <p>
+      This section shows the full wiring between <strong>Arduino</strong>, <strong>HC-05</strong>, <strong>L298N</strong>, the two motors and the battery.
+    </p>
+
+    <h2>Summary of connections</h2>
+    <div class="wires">
+      <p><strong>Bluetooth HC-05:</strong></p>
+      <ul>
+        <li>HC-05 VCC → Arduino 5V (or external 5V) </li>
+        <li>HC-05 GND → Arduino GND</li>
+        <li>HC-05 TX → Arduino RX (or SoftwareSerial RX pin)</li>
+        <li>HC-05 RX → Arduino TX (via voltage divider to step Arduino TX to ~3.3V)</li>
+      </ul>
+
+      <p><strong>L298N & Motors:</strong></p>
+      <ul>
+        <li>L298N Vmotor → Battery positive (7.4V / as required)</li>
+        <li>L298N GND → Battery negative & Arduino GND (common ground)</li>
+        <li>IN1,IN2 → Arduino digital pins (e.g., 8,9) for motor A</li>
+        <li>EN A → Arduino PWM pin (e.g., 10)</li>
+        <li>IN3,IN4 → Arduino digital pins (e.g., 4,5) for motor B</li>
+        <li>EN B → Arduino PWM pin (e.g., 11)</li>
+        <li>OUT pins → Motor terminals</li>
+      </ul>
+    </div>
+
+    <h2>Wiring diagram (example)</h2>
+    <img src="mooootre.png" alt="wiring diagram">
+
+    <p>
+      <strong>Important:</strong> always connect grounds together (battery negative, Arduino GND, L298N GND). 
+      If L298N has an onboard 5V regulator and you want to power Arduino from motor supply, follow module documentation and caution.
+    </p>
+
+    <br>
+    <a href="robot6.html"><button class="next-button">Next: Arduino Code (complete) ➜</button></a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Robot Car — Bluetooth Control & Tips</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body{font-family:'Segoe UI',sans-serif;margin:0;background:linear-gradient(to right,#000428,#004e92);color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;}
+    .container{background:rgba(255,255,255,0.05);border-radius:20px;padding:30px;max-width:900px;text-align:left;box-shadow:0 0 25px rgba(0,0,0,0.6);}
+    h1{font-size:34px}
+    h2{color:#ffd480;margin-top:18px}
+    p{font-size:16px;line-height:1.7}
+    ul{margin-left:18px}
+    .next-button{margin-top:22px;padding:12px 26px;background:#ff6f00;color:#fff;border:none;border-radius:30px;font-size:16px;cursor:pointer;}
+    .logo{position:absolute;left:12px;top:12px;width:80px;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,0.3);}
+    img{max-width:520px;border-radius:10px;margin-top:12px;box-shadow:0 0 15px #000;display:block;margin-left:auto;margin-right:auto}
+  </style>
+</head>
+<body>
+  <a href="https://www.facebook.com/JupiterAcademyForKids/" target="_blank"><img src="jupiter.webp" class="logo" alt="logo"></a>
+  <div class="container">
+    <h1>Bluetooth Control, Troubleshooting & Enhancements</h1>
+
+    <h2>Bluetooth pairing & app</h2>
+    <p>
+      - Pair the HC-05 with your phone (default PIN often 1234 or 0000).<br>
+      - Use a serial-Bluetooth terminal app or a custom controller app (many “Bluetooth Controller” apps on Play Store).
+    </p>
+
+    <h2>Typical command flow</h2>
+    <ul>
+      <li>App sends 'F' → HC-05 receives → Arduino executes forward()</li>
+      <li>App sends 'L' → Arduino executes turnLeft()</li>
+      <li>Send 'S' to stop</li>
+    </ul>
+
+    <h2>Troubleshooting tips</h2>
+    <ul>
+      <li><strong>No response:</strong> check HC-05 power & wiring, ensure common ground.</li>
+      <li><strong>Motors jitter:</strong> battery low or noisy — add decoupling capacitors and use proper battery.</li>
+      <li><strong>HC-05 not pairing:</strong> check module state LED; ensure correct voltage on RX (use divider).</li>
+    </ul>
+
+    <h2>Enhancements</h2>
+    <p>
+      - Add ultrasonic sensor for obstacle avoidance (automate stop/turn).<br>
+      - Add speed control slider in the app and pass numeric speed values to Arduino.<br>
+      - Add LED front/back indicators and battery voltage monitor.
+    </p>
+
+    <img src="rooboot.jpg" alt="robot car">
+
+    <br>
+    <a href="index.html"><button class="next-button">Back to Start ⤴</button></a>
+  </div>
+</body>
+</html>
