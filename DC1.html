@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meet the DC Motor ⚡</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #000428, #004e92);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      background-color: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 850px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    }
+    h1 {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+      line-height: 1.7;
+    }
+    img {
+      max-width: 250px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #000;
+    }
+    .next-button {
+      margin-top: 30px;
+      padding: 12px 25px;
+      background-color: #ff6f00;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .next-button:hover {
+      background-color: #ffa000;
+    }
+    .logo {
+      width: 80px;
+      height: auto;
+      margin: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+<a href="https://www.facebook.com/" target="_blank">
+  <img src="jupiter.webp" class="logo">
+</a>
+  <div class="container">
+    <h1>Meet the DC Motor ⚡</h1>
+
+    <p><span class="emoji">🔋</span> A <strong>DC Motor</strong> converts electrical energy into mechanical motion.</p>
+    <p><span class="emoji">🚗</span> It's used in <strong>robots, fans, cars, and toys</strong> to create continuous rotation.</p>
+    <p><span class="emoji">🎚</span> Its <strong>speed</strong> can be controlled using <strong>PWM signals</strong>, and its <strong>direction</strong> by changing polarity.</p>
+    <p><span class="emoji">🛠</span> Usually connected with a <strong>motor driver (like L298N)</strong> when used with Arduino.</p>
+
+    <img src="dc.jpg" alt="DC Motor">
+
+    <br>
+    <a href="DC2.html">
+      <button class="next-button">Next: Wiring 🔌➡</button>
+    </a>
+  </div>
+</body>
+</html>

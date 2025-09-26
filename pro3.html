@@ -3,41 +3,45 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>STUDENT REGISTRATION FORM</title>
+    <title>STUDENT REGISTRATION FORM </title>
 </head>
 
 <body>
 
-    <u><h1>STUDENT REGISTRATION FORM</h1>
-</u>
+    <u>
+        <h1>STUDENT REGISTRATION FORM</h1>
+    </u>
+
     <form>
         <table>
 
             <tr>
                 <td><label for="fname"><b>FIRST NAME:</b></label></td>
-                <td><input type="text" id="fname" name="firstname" maxlength="30">(max 30 characters A-Z and a-z)</td>
+                <td><input type="text" maxlength="30" placeholder="Enter first name">(max 30 characters A-Z and a-z)
+                </td>
 
             </tr>
 
             <tr>
                 <td><label for="lname"><b>LAST NAME:</b></label></td>
-                <td><input type="text" id="lname" name="lastname" maxlength="30"> (max 30 characters A-Z and a-z)</td>
+                <td><input type="text" maxlength="30" placeholder="Enter last name"> (max 30 characters A-Z and a-z)
+                </td>
 
             </tr>
 
             <tr>
                 <td><label for="dob"><b>DATE OF BIRTH:</b></label></td>
-                <td><input type="date" id="dob" name="dob"></td>
+                <td><input type="date"></td>
             </tr>
 
             <tr>
                 <td><label for="email"><b>EMAIL ID:</b></label></td>
-                <td><input type="email" id="email" name="email"></td>
+                <td><input type="email"></td>
             </tr>
 
             <tr>
                 <td><label for="mobile"><b>MOBILE NO:</b></label></td>
-                <td><input type="text" id="mobile" name="mobile" maxlength="10">(10 digits number)</td>
+                <td><input type="text" maxlength="10" placeholder="Enter mobile on">(10 digits number)</td>
             </tr>
 
             <tr>
@@ -50,49 +54,54 @@
 
             <tr>
                 <td><label for="address"><b>ADDRESS:</b></label></td>
-                <td><textarea id="address" name="address" rows="4" cols="30"></textarea></td>
+                <td><textarea rows="4" cols="30"></textarea></td>
             </tr>
 
             <tr>
                 <td><label for="city"><b>CITY:</b></label></td>
-                <td><input type="text" id="city" name="city"></td>
+                <td><input type="text" placeholder="Enter your city name"></td>
             </tr>
 
             <tr>
                 <td><label for="pincode"><b>PIN CODE:</b></label></td>
-                <td><input type="text" id="pincode" name="pincode" maxlength="6">(6 digits number)</td>
+                <td><input type="text" maxlength="6" placeholder="Enter pin code">(6 digits number)</td>
 
             </tr>
 
             <tr>
                 <td><label for="state"><b>STATE:</b></label></td>
-                <td><input type="text" id="state" name="state"></td>
+                <td><input type="text" placeholder="Enter your state name "></td>
             </tr>
 
             <tr>
                 <td><label for="country"><b>COUNTRY:</b></label></td>
-                <td><input type="text" id="country" name="country"></td>
+                <td><input type="text" placeholder="Enter your country name"></td>
             </tr>
 
             <tr>
                 <td><label><b>HOBBIES:</b></label></td>
                 <td>
-                    <input type="checkbox" name="hobby" value="Singing"> Singing
-                    <input type="checkbox" name="hobby" value="Dancing"> Dancing
-                    <input type="checkbox" name="hobby" value="Drawing"> Drawing
-                    <input type="checkbox" name="hobby" value="Sketching"> Sketching
-                    <input type="checkbox" name="hobby" value="Others"> Others
-                    <input type="text" name="otherhobby">
+                    <input type="checkbox" value="Singing"> Singing
+                    <input type="checkbox" value="Dancing"> Dancing
+                    <input type="checkbox" value="Drawing"> Drawing
+                    <input type="checkbox" value="Sketching"> Sketching
+
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" value="Others"> Others
+                    <input type="text" placeholder="Enter any other hobby">
                 </td>
             </tr>
 
             <tr>
                 <td><label><b>COURSES:</b></label></td>
                 <td>
-                    <label><input type="radio" name="course" value="BCA"> BCA</label>
-                    <label><input type="radio" name="course" value="BCom"> B.Com</label>
-                    <label><input type="radio" name="course" value="BSc"> B.Sc</label>
-                    <label><input type="radio" name="course" value="BA"> B.A</label>
+                    <input type="radio" name="COURSES" value="BCom"> B.Com
+                    <input type="radio" name="COURSES" value="BCA"> BCA
+                    <input type="radio" name="COURSES" value="BA"> B.A
+                    <input type="radio" name="COURSES" value="BSc"> B.Sc
                 </td>
             </tr>
 

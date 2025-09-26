@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Relay Wiring Guide 🔧</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #ff8008, #ffc837);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      background-color: rgba(0,0,0,0.4);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 850px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+      line-height: 1.8;
+    }
+    img {
+      max-width: 400px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #000;
+    }
+    .next-button {
+      margin-top: 30px;
+      padding: 12px 25px;
+      background-color: #2ecc71;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .next-button:hover {
+      background-color: #27ae60;
+    }
+    .logo {
+      width: 80px;
+      height: auto;
+      margin: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+<a href="https://www.facebook.com/JupiterAcademyForKids/" target="_blank">
+  <img src="jupiter.webp" class="logo">
+</a>
+  <div class="container">
+    <h1>How to Connect Relay 🔌</h1>
+
+    <p><span class="emoji">📌</span> Relay modules usually have <strong>3 input pins</strong> from Arduino:</p>
+
+    <p>
+      <strong>🔴 VCC:</strong> Connect to <strong>5V</strong><br>
+      <strong>⚫ GND:</strong> Connect to <strong>GND</strong><br>
+      <strong>🟢 IN:</strong> Connect to a <strong>digital pin</strong> (like pin 7)
+    </p>
+
+    <p><span class="emoji">⚡</span> On the output side:  
+      <br>🔌 COM (Common)  
+      <br>🔌 NO (Normally Open) → device ON when activated  
+      <br>🔌 NC (Normally Closed) → device OFF when activated
+    </p>
+
+    <img src="reeeeeeeeeeeeelay.png" alt="Relay Wiring">
+<br>
+    <a href="relay3.html">
+      <button class="next-button">Next: Arduino Code 💻➡</button>
+    </a>
+  </div>
+</body>
+</html>

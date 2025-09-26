@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome to Arduino World</title>
   <style>
     body {
@@ -42,6 +43,7 @@
       background: linear-gradient(90deg, #00ffe7, #ff00c8, #faff00);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+
     }
 
     p {
@@ -69,11 +71,47 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+        margin-top: 80px;
+      }
+
+
+
+      p {
+        font-size: 1.5rem;
+      }
+
+
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+        padding: 15px;
+      }
+
+
+      p {
+        font-size: 1.3rem;
+      }
+
     }
   </style>
 </head>
+
 <body>
 
   <a href="https://www.facebook.com/JupiterAcademyForKids/" target="_blank">
@@ -89,4 +127,5 @@
   </div>
 
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +12,11 @@
       padding-bottom: 60px;
       margin: 0;
     }
-    * { box-sizing: border-box; }
+
+    * {
+      box-sizing: border-box;
+    }
+
     .logo {
       width: 70px;
       position: fixed;
@@ -23,11 +28,13 @@
       max-width: 15vw;
       height: auto;
     }
+
     .logo:hover {
       transform: scale(1.05);
       box-shadow: 0 0 25px #ff00f7;
       border-radius: 25%;
     }
+
     h1 {
       text-align: center;
       margin-top: 100px;
@@ -38,21 +45,36 @@
       text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
       padding: 0 10px;
     }
+
     .levels-container {
       max-width: 1200px;
       margin: 60px auto;
       padding: 0 20px;
     }
+
     .level {
       border-radius: 20px;
       padding: 50px 30px;
       margin-bottom: 60px;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
     }
-    .level-one { background: linear-gradient(135deg, #1e3c72, #0b3177); }
-    .level-two { background: linear-gradient(135deg, #4f2a98, #e90a4d); }
-    .level-three { background: linear-gradient(135deg, #ff4e50, #f9d423); }
-    .level-four { background: linear-gradient(135deg, #1cb5e0, #000851); }
+
+    .level-one {
+      background: linear-gradient(135deg, #1e3c72, #0b3177);
+    }
+
+    .level-two {
+      background: linear-gradient(135deg, #4f2a98, #e90a4d);
+    }
+
+    .level-three {
+      background: linear-gradient(135deg, #ff4e50, #f9d423);
+    }
+
+    .level-four {
+      background: linear-gradient(135deg, #b21ce0, #000851);
+    }
+
     .level-header {
       display: flex;
       align-items: center;
@@ -62,26 +84,30 @@
       margin-bottom: 40px;
       text-align: center;
     }
+
     .level-icon {
       font-size: 3rem;
       background: rgba(255, 255, 255, 0.1);
       padding: 25px;
       border-radius: 50%;
       border: #fff 3px solid;
-      box-shadow: inset 0 0 20px rgb(187, 184, 184),0 0 20px rgb(187, 184, 184);
+      box-shadow: inset 0 0 20px rgb(187, 184, 184), 0 0 20px rgb(187, 184, 184);
     }
+
     .level-title {
       font-size: 2.2rem;
       font-weight: 900;
       color: #fff;
       text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
     }
+
     .image-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
     }
+
     .component-link {
       background: rgba(255, 255, 255, 0.05);
       border-radius: 20px;
@@ -92,11 +118,14 @@
       text-align: center;
       text-decoration: none;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
     }
+
     .component-link:hover {
       transform: scale(1.009);
       box-shadow: 0 15px 35px rgba(0, 255, 255, 0.3);
     }
+
     .component-img {
       width: 100%;
       height: auto;
@@ -107,6 +136,7 @@
       box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
       transition: 0.4s ease;
     }
+
     .component-name {
       margin-top: 12px;
       font-weight: bold;
@@ -116,7 +146,11 @@
       transition: opacity 0.3s ease;
       user-select: none;
     }
-    .component-link:hover .component-name { opacity: 1; }
+
+    .component-link:hover .component-name {
+      opacity: 1;
+    }
+
     .separator {
       height: 8px;
       width: 80%;
@@ -124,14 +158,16 @@
       border-radius: 5px;
       background: linear-gradient(90deg, #00ffff, #ff00ff, #ffff00);
     }
+
     p {
       font-size: 2.2rem;
       font-weight: 900;
-      color: #fff;
+      color: #ffffff;
       text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
       text-align: center;
       padding: 0 10px;
     }
+
     .lang-btn {
       position: fixed;
       top: 20px;
@@ -146,11 +182,13 @@
       box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
       transition: all 0.3s;
     }
+
     .lang-btn:hover {
       border-radius: 25%;
       transform: scale(1.08);
       box-shadow: 0 0 15px #ff00f7;
     }
+
     #ff {
       margin-left: auto;
       margin-right: auto;
@@ -158,57 +196,65 @@
       font-size: 1.6rem;
       text-align: center;
     }
-    @media (max-width: 768px) {
-      h1 { font-size: 2.2rem; margin-top: 80px; }
-      .level-title { font-size: 1.6rem; }
-      p { font-size: 1.5rem; }
-      .level { padding: 30px 15px; }
-    }
-    @media (max-width: 480px) {
-      .level-icon { font-size: 2rem; padding: 15px; }
-      .lang-btn { padding: 10px 14px; font-size: 16px; }
-      #ff { font-size: 1.3rem; }
-    }
+
     .update {
       background: linear-gradient(45deg, #ff3b3b, #ff7f00, #ffff00, #00ff00, #00bfff, #8a2be2);
       -webkit-background-clip: text;
       color: transparent;
       font-weight: bold;
     }
+
     .upgrade {
       font-weight: bold;
     }
+
     .button-container {
       display: flex;
       justify-content: center;
       align-items: center;
       margin-top: 40px;
     }
+
     .enter-button {
       padding: 15px 40px;
-      font-size:1rem;
+      font-size: 1rem;
       border: none;
       border-radius: 30px;
       cursor: pointer;
       background: linear-gradient(to right, #ff00c8, #00ffe7);
-      color: #000;
       font-weight: bold;
       box-shadow: 0 0 20px #00ffe7;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: #fff;
     }
+
     .enter-button:hover {
       transform: scale(1.1);
       box-shadow: 0 0 30px #ff00ff, 0 0 40px #00ffe7;
     }
+
+    .new-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: linear-gradient(45deg, #ff3b3b, #ff7f00, #ffff00, #00ff00, #00bfff, #8a2be2);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transform: rotate(45deg);
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+    }
   </style>
 </head>
+
 <body>
   <a href="https://www.facebook.com/JupiterAcademyForKids/" target="_blank">
     <img src="jupiter.webp" class="logo" alt="Logo">
   </a>
   <a href="index - AR.html" class="lang-btn">AR</a>
   <h1>Arduino Components | In English</h1>
-  <p class="upgrade"> 🔄   Switch your vibe between Arabic & English </p>
+  <p class="upgrade"> 🚀 Explore new updates with more modules and exciting projects </p>
   <div class="levels-container">
     <section class="level level-one">
       <div class="level-header">
@@ -240,9 +286,10 @@
           <img src="RGB1.jpg" alt="RGB LED" class="component-img">
           <div class="component-name">RGB LED</div>
         </a>
-        <a href="#" class="component-link">
+        <a href="poton1.html" class="component-link">
+          <div class="new-badge">NEW!!</div>
           <img src="poton-png.jpg" alt="Potentiometer" class="component-img">
-          <div class="component-name">coming soon !</div>
+          <div class="component-name">Potentiometer</div>
         </a>
       </div>
     </section>
@@ -261,25 +308,30 @@
           <img src="LCD.jpg" alt="LCD" class="component-img">
           <div class="component-name">LCD Display</div>
         </a>
-        <a href="ultra.html" class="component-link">
+        <a href="ultra1.html" class="component-link">
+          <div class="new-badge">NEW!!</div>
           <img src="ultra1.jpg" alt="Ultrasonic" class="component-img">
-          <div class="component-name">coming soon !</div>
+          <div class="component-name">Ultrasonic</div>
         </a>
-        <a href="relay.html" class="component-link">
+        <a href="relay1.html" class="component-link">
+          <div class="new-badge">NEW!!</div>
           <img src="relay1.jpg" alt="Relay" class="component-img">
-          <div class="component-name">coming soon !</div>
+          <div class="component-name">Relay</div>
         </a>
-        <a href="bluetooth.html" class="component-link">
+        <a href="bluetooth1.html" class="component-link">
+          <div class="new-badge">NEW!!</div>
           <img src="bluetooth1.jpg" alt="Bluetooth" class="component-img">
-          <div class="component-name">coming soon !</div>
+          <div class="component-name">Bluetooth</div>
         </a>
-        <a href="dc.html" class="component-link">
+        <a href="DC1.html" class="component-link">
+          <div class="new-badge">NEW!!</div>
           <img src="dc.jpg" alt="DC Motor" class="component-img">
-          <div class="component-name">coming soon !</div>
+          <div class="component-name">DC Motor</div>
         </a>
         <a href="7.html" class="component-link">
+          <div class="new-badge">NEW!!</div>
           <img src="7.jpg" alt="7 Segment" class="component-img">
-          <div class="component-name">coming soon !</div>
+          <div class="component-name">7 Segment</div>
         </a>
       </div>
     </section>
@@ -300,16 +352,23 @@
         <h2 class="level-title">Rank 4: Projects</h2>
       </div>
       <div class="image-container">
-        <p>coming soon !</p>
+        <a href="robot1.html" class="component-link">
+          <div class="new-badge">NEW!!</div>
+          <img src="robot car.jfif" class="component-img">
+          <div class="component-name">Bluetooth Robot Car</div>
+        </a>
       </div>
     </section>
-    <p id="ff">Fresh updates every week — stay tuned for something new</p> 
-    <p id="ff"><u class="update">update</u> : Now you can easily switch between Arabic and English languages using the button above (AR)</p>
+    <p id="ff">Hi, I'm Tayem. I build engaging online projects to help you explore and learn Arduino with easly</p>
+    <p id="ff">Fresh updates every week — stay tuned for something new</p>
+    <p id="ff"><u class="update">update</u> : Added a new section for Components with explanation and examples like Bluetooth Robot Car</p>
     <div class="button-container">
       <a href="CODEX.html">
         <button class="enter-button"> STYLE 💻</button>
       </a>
     </div>
+
   </div>
 </body>
+
 </html>

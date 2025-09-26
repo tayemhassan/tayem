@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>How to Connect the Potentiometer 🔌🛠</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #1a2980, #26d0ce);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      background-color: rgba(0,0,0,0.4);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 850px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+      line-height: 1.8;
+    }
+    .emoji {
+      font-size: 22px;
+    }
+    img {
+      max-width: 400px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #000;
+    }
+    .next-button {
+      margin-top: 30px;
+      padding: 12px 25px;
+      background-color: #2ecc71;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .next-button:hover {
+      background-color: #27ae60;
+    }
+    .logo {
+      width: 80px;
+      height: auto;
+      margin: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+<a href="https://www.facebook.com/JupiterAcademyForKids/" target="_blank">
+  <img src="jupiter.webp" class="logo">
+</a>
+  <div class="container">
+    <h1>How to Connect Your Potentiometer 🔧</h1>
+
+    <p><span class="emoji">📌</span> Connect the potentiometer’s <strong>3 pins</strong> like this:</p>
+
+    <p>
+      <strong>1️⃣ Left Pin:</strong> Connect to <strong>GND</strong><br>
+      <strong>2️⃣ Middle Pin:</strong> Connect to <strong>Analog input</strong> (like A0)<br>
+      <strong>3️⃣ Right Pin:</strong> Connect to <strong>5V</strong>
+    </p>
+
+    <p><span class="emoji">📎</span> As you rotate the knob, Arduino will read values from <strong>0 to 1023</strong>.</p>
+
+    <img src="pppppp.webp" alt="Potentiometer Wiring">
+<br>
+    <a href="poton3.html">
+      <button class="next-button">Next: Arduino Code 💻➡</button>
+    </a>
+  </div>
+</body>
+</html>
